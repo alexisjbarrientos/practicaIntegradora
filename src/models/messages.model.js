@@ -1,14 +1,12 @@
 import mongoose from "mongoose"
 
-const massegeCollection ="massege"
-const massegeSchema = new mongoose.Schema({
+const messageCollection ="message"
+const messageSchema = new mongoose.Schema({
     
-        users : String,
-        messege : String,
+        user : String,
+        message : String,
 },{       
         timestamps : true
 })
 
-const messegeModel = mongoose.model(massegeCollection,massegeSchema)
-
-export default messegeModel
+ export const messageModel = mongoose.model(messageCollection,messageSchema)

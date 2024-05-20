@@ -28,7 +28,7 @@ mongoose.connect(process.env.MONGO_URL)
     .catch(error => console.error("Error en la conexion", error))
 
 
-const manager = new ProductManager()
+
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
