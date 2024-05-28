@@ -1,0 +1,38 @@
+<!-- cart.handlebars -->
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Carrito de Compras</h1>
+
+    {{#if cartItems.length}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each cartItems}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>${{this.price}}</td>
+                <td>{{this.quantity}}</td>
+                <td>${{this.subtotal}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <div class="text-end">
+        <h5>Total: ${{total}}</h5>
+    </div>
+    {{else}}
+    <div class="alert alert-info" role="alert">
+        Tu carrito está vacío.
+    </div>
+    {{/if}}
+
+    <div class="text-center mt-4">
+        <a href="/home" class="btn btn-primary">Ir a Pagar</a>
+    </div>
+</div>

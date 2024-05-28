@@ -17,6 +17,9 @@ routerV.get("/realtimeproducts", (req,res) =>  {
 routerV.get("/messege", (req,res) =>  {
     res.render("messege")
 })
+routerV.get("/carts",(req,res) =>{
+    res.render("carts")
+})
 
 
 export default routerV
